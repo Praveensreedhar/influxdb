@@ -1,0 +1,21 @@
+show databases
+create database INFRA
+
+use INFRA
+
+INSERT Bandwidth,in_data=1290,out_data=2022,location=TRV,hostname=TRV-TATA isp=1234
+
+INSERT Bandwidth,hostname=TRV-TATA download=1200
+
+SHOW MEASUREMENTS
+
+show measurements where "hostname" = 'TRV-TATA'
+
+select * from Bandwidth
+
+drop measurment Bandwidth
+show series
+
+select * from Bandwidth where in_data='1290'
+
+select * from Bandwidth where time >= now() -5m
